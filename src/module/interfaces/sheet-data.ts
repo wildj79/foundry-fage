@@ -1,5 +1,8 @@
-export interface FAGEActorSheetData extends ActorSheetData {
+import { FAGEActorData } from "./actor-data";
 
+export interface FAGEActorSheetData extends ActorSheetData {
+    config: object;
+    data: FAGEActorData
 }
 
 export interface FAGECharacterSheetData extends FAGEActorSheetData {
