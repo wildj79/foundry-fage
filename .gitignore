@@ -1,3 +1,48 @@
-node_modules
+# Visual Studio
+.vs/*
+
+# Visual Studio Code
+.vscode/*
+*.code-workspace
+
+# Jetbrains IDE's
+.idea/
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+# thumbnail cache files
+[Tt]humbs.db
+[Tt]humbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# node modules
+node_modules/*
+
+# Foundry Project Creator specific file
 foundryconfig.json
+
+# Distrabution files.
 dist
