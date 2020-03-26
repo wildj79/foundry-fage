@@ -1,0 +1,175 @@
+{
+  "Actor": {
+    "types": ["character", "adversary"],
+    "templates": {
+      "common": {
+        "abilities": {
+          "acc": {
+            "value": 0,
+            "advancements": 0,
+            "isPrimary": false
+          },
+          "com": {
+            "value": 0,
+            "advancements": 0,
+            "isPrimary": false
+          },
+          "con": {
+            "value": 0,
+            "advancements": 0,
+            "isPrimary": false
+          },
+          "dex": {
+            "value": 0,
+            "advancements": 0,
+            "isPrimary": false
+          },
+          "fig": {
+            "value": 0,
+            "advancements": 0,
+            "isPrimary": false
+          },
+          "int": {
+            "value": 0,
+            "advancements": 0,
+            "isPrimary": false
+          },
+          "per": {
+            "value": 0,
+            "advancements": 0,
+            "isPrimary": false
+          },
+          "str": {
+            "value": 0,
+            "advancements": 0,
+            "isPrimary": false
+          },
+          "wil": {
+            "value": 0,
+            "advancements": 0,
+            "isPrimary": false
+          }
+        },
+        "hp": {
+          "value": 10,
+          "max": 10
+        },
+        "mp": {
+          "value": 0,
+          "max": 0
+        },
+        "spellpower": 0,
+        "speed": {
+          "ground": 10,
+          "fly": 0,
+          "units": "yd"
+        },
+        "defense": 10,
+        "armor": {
+          "type": "",
+          "value": 0,
+          "penalty": 0
+        },
+        "biography": "",
+        "race": "",
+        "weaponGroups": [],
+        "talents": [],
+        "specializations": []
+      }
+    },
+    "character": {
+      "templates": ["common"],
+      "background": "",
+      "socialClass": "",
+      "class": "",
+      "level": 0,
+      "xp": {
+        "value": 0,
+        "max": 1000
+      },
+      "currency": {
+        "gp": 0,
+        "sp": 0,
+        "cp": 0
+      }
+    },
+    "adversary": {
+      "templates": ["common"],
+      "favoredStunts": [],
+      "threat": ""
+    }
+  },
+  "Item": {
+    "types": ["class", "focus", "weapon", "armor", "spell", "gear", "talent", "background", "power", "grenade"],
+    "templates": {
+      "common": {
+        "cost": 0,
+        "description": ""
+      }
+    },
+    "gear": {
+      "templates": ["common"],
+      "type": ""
+    },
+    "focus": {
+      "bonus": 2,
+      "ability": ""
+    },
+    "weapon": {
+      "tmeplates": ["common"],
+      "group": "",
+      "type": "",
+      "damage": "",
+      "strength": null,
+      "ability": "",
+      "range": {
+        "short": 0,
+        "long": 0
+      },
+      "reload": ""
+    },
+    "grenade": {
+      "templates": ["common"],
+      "damage": "",
+      "makeCost": 0
+    },
+    "armor": {
+      "templates": ["common"],
+      "rating": 0,
+      "penalty": 0,
+      "bonus": 0,
+      "type": "armor"
+    },
+    "talent": {
+      "degree": "",
+      "classes": [],
+      "requirements": "",
+      "type": "talent",
+      "description": "",
+      "benefits": []
+    },
+    "background": {
+      "socialClass": "outsider",
+      "description": ""
+    },
+    "class": {
+      "primaryAbilities": [],
+      "secondaryAbilities": [],
+      "health": "20 + @abilities.con + 1d6",
+      "weaponGroups": [],
+      "description": ""
+    },
+    "power": {
+      "description": ""
+    },
+    "spell": {
+      "requirements": "",
+      "type": "attack",
+      "mpCost": 1,
+      "time": "",
+      "tn": 10,
+      "test": "",
+      "description": ""
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "fage",
+  "title": "Fantasy AGE",
+  "description": "System definition for the Fantasy AGE RPG",
+  "version": "0.1.0",
+  "author": "wildj79",
+  "authors": [
+    {
+      "name": "James Allred",
+      "email": "wildj79@gmail.com",
+      "url": ""
+    }
+  ],
+  "scripts": [],
+  "esmodules": ["fage.js"],
+  "styles": ["fage.css"],
+  "packs": [],
+  "languages": [],
+  "gridDistance": 2,
+  "gridUnits": "yd",
+  "minimumCoreVersion": "0.5.0",
+  "compatibleCoreVersion": "0.5.0",
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "MIT",
+  "readme": "",
+  "bugs": "",
+  "changelog": ""
+}
