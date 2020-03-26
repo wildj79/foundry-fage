@@ -13,20 +13,39 @@
 // Import TypeScript modules
 import { registerSettings } from './module/settings.js';
 import { preloadTemplates } from './module/preloadTemplates.js';
+import { FAGE } from './module/config.js';
+import { FAGEActor } from './module/actor/entity.js';
+import { FAGEAdversarySheet } from './module/actor/sheet/adversary.js';
+import { FAGECharacterSheet } from './module/actor/sheet/character.js';
 
 /* ------------------------------------ */
 /* Initialize system					*/
 /* ------------------------------------ */
 Hooks.once('init', async function() {
-	console.log('fage | Initializing Fantasy AGE');
+	console.log('FAGE | Initializing Fantasy AGE');
+	console.log(`__________________________________________________________
+ _____           _                       _    ____ _____
+|  ___|_ _ _ __ | |_ __ _ ___ _   _     / \\  / ___| ____|
+| |_ / _\` | '_ \\| __/ _\` / __| | | |   / _ \\| |  _|  _|
+|  _| (_| | | | | || (_| \\__ \\ |_| |  / ___ \\ |_| | |___
+|_|  \\__,_|_| |_|\\__\\__,_|___/\\__, | /_/   \\_\\____|_____|
+                               |___/
+==========================================================`);
 
 	// Assign custom classes and constants here
+
+	CONFIG.FAGE = FAGE;
+	CONFIG.Actor.entityClass = FAGEActor;
 	
 	// Register custom system settings
 	registerSettings();
 	
 	// Preload Handlebars templates
 	await preloadTemplates();
+
+	Actors.unregisterSheet("core", ActorSheet);
+	Actors.registerSheet("fage", FAGECharacterSheet, { types: ["character"], makeDefault: true });
+	Actors.registerSheet("fage", FAGEAdversarySheet, { types: ["adversary"], makeDefault: true });
 
 	// Register custom sheets (if any)
 });
@@ -37,6 +56,17 @@ Hooks.once('init', async function() {
 Hooks.once('setup', function() {
 	// Do anything after initialization but before
 	// ready
+	const toLocalize = [
+		"abilities"
+	];
+
+	for (let o of toLocalize) {
+		CONFIG.FAGE[o] = Object.entries(CONFIG.FAGE[o]).reduce((obj: [string, string], e: [string, string]): object => {
+			obj[e[0]] = game.i18n.localize(e[1]);
+
+			return obj;
+		}, {});
+	}
 });
 
 /* ------------------------------------ */

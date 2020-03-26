@@ -1,0 +1,17 @@
+{
+    "FAGE.Ability.Accuracy": "Accuracy",
+    "FAGE.Ability.Communication": "Communication",
+    "FAGE.Ability.Constitution": "Constitution",
+    "FAGE.Ability.Dexterity": "Dexterity",
+    "FAGE.Ability.Fighting": "Fighting",
+    "FAGE.Ability.Intelligence": "Intelligence",
+    "FAGE.Ability.Perception": "Perception",
+    "FAGE.Ability.Strength": "Strength",
+    "FAGE.Ability.Willpower": "Willpower",
+    "FAGE.Health": "Health",
+    "FAGE.Speed": "Speed",
+    "FAGE.Defense": "Defense",
+    "FAGE.Armor.Rating": "Armor",
+    "FAGE.Armor.Penalty": "Penalty",
+    "FAGE.Armor.Type": "Armor Type"
+}
