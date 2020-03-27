@@ -1,3 +1,5 @@
+import { Spell, Focus, Power, Class, Background, Talent, Armor, Grenade, Weapon, Gear } from "./item";
+
 export interface FAGEActorData extends ActorData {
     abilities: {
         acc: Ability;
@@ -20,8 +22,6 @@ interface Ability {
     focuses: Focus[];
 }
 
-interface Focus {
-    bonus: number;
-    ability: string;
-    label: string;
+export interface FAGEActorData extends BaseEntityData, Spell, Power, Class, Background, Talent, Armor, Grenade, Weapon, Focus, Gear {
+
 }

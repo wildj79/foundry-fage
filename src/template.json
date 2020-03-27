@@ -103,23 +103,41 @@
     "types": ["class", "focus", "weapon", "armor", "spell", "gear", "talent", "background", "power", "grenade"],
     "templates": {
       "common": {
-        "cost": 0,
+        "cost": {
+          "gp": 0,
+          "sp": 0,
+          "cp": 0
+        }
+      },
+      "damaging": {
+        "damage": {
+          "formula": "",
+          "isPenetrating": false
+        }
+      },
+      "magical": {
+        "isMagical": false,
+        "rarity": "",
+        "category": ""
+      },
+      "describable": {
         "description": ""
+      },
+      "typable": {
+        "type": ""
       }
     },
     "gear": {
-      "templates": ["common"],
-      "type": ""
+      "templates": ["common", "describable", "typable", "magical"]
     },
     "focus": {
+      "templates": ["describable"],
       "bonus": 2,
       "ability": ""
     },
     "weapon": {
-      "tmeplates": ["common"],
+      "templates": ["common", "damaging", "describable", "typable", "magical"],
       "group": "",
-      "type": "",
-      "damage": "",
       "strength": null,
       "ability": "",
       "range": {
@@ -129,47 +147,61 @@
       "reload": ""
     },
     "grenade": {
-      "templates": ["common"],
-      "damage": "",
-      "makeCost": 0
+      "templates": ["common", "damaging", "describable", "magical"],
+      "makeCost": {
+        "gp": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "radius": 2
     },
     "armor": {
-      "templates": ["common"],
+      "templates": ["common", "describable", "typable", "magical"],
       "rating": 0,
       "penalty": 0,
-      "bonus": 0,
-      "type": "armor"
+      "bonus": 0
     },
     "talent": {
+      "templates": ["describable", "typable"],
       "degree": "",
       "classes": [],
       "requirements": "",
-      "type": "talent",
-      "description": "",
       "benefits": []
     },
     "background": {
-      "socialClass": "outsider",
-      "description": ""
+      "templates": ["describable"],
+      "socialClass": "outsider"
     },
     "class": {
+      "templates": ["describable"],
       "primaryAbilities": [],
       "secondaryAbilities": [],
       "health": "20 + @abilities.con + 1d6",
-      "weaponGroups": [],
-      "description": ""
+      "weaponGroups": []
     },
     "power": {
-      "description": ""
+      "templates": ["describable"],
+      "class": "",
+      "level": 1
     },
     "spell": {
+      "templates": ["damaging", "describable", "typable"],
       "requirements": "",
-      "type": "attack",
-      "mpCost": 1,
+      "mpCost": {
+        "isVariable": false,
+        "min": 1,
+        "max": 1
+      },
       "time": "",
       "tn": 10,
       "test": "",
-      "description": ""
+      "duration": "",
+      "area": {
+        "length": 0,
+        "width": 0,
+        "radius": 0,
+        "distance": 0
+      }
     }
   }
 }

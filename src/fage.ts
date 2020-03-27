@@ -17,6 +17,7 @@ import { FAGE } from './module/config.js';
 import { FAGEActor } from './module/actor/entity.js';
 import { FAGEAdversarySheet } from './module/actor/sheet/adversary.js';
 import { FAGECharacterSheet } from './module/actor/sheet/character.js';
+import { FAGEItem } from './module/item/item.js';
 
 /* ------------------------------------ */
 /* Initialize system					*/
@@ -36,6 +37,7 @@ Hooks.once('init', async function() {
 
 	CONFIG.FAGE = FAGE;
 	CONFIG.Actor.entityClass = FAGEActor;
+	CONFIG.Item.entityClass = FAGEItem;
 	
 	// Register custom system settings
 	registerSettings();
