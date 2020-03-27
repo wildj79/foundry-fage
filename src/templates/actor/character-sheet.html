@@ -1,5 +1,13 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
     <header class="sheet-header flexrow">
-        <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img" height="220" width="220" />
+        <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img" height="150" width="150" />
+
+        <div class="header-details flexrow">
+            <div class="header-background flexrow">
+                <h1 class="charname">
+                    <input type="text" name="name" value="{{actor.name}}" placehoder="Character Name" />
+                </h1>
+            </div>
+        </div>
     </header>
 </form>
