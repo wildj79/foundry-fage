@@ -100,7 +100,7 @@
     }
   },
   "Item": {
-    "types": ["class", "focus", "weapon", "armor", "spell", "gear", "talent", "background", "power", "grenade"],
+    "types": ["class", "focus", "weapon", "armor", "spell", "gear", "talent", "background", "power", "grenade", "race"],
     "templates": {
       "common": {
         "cost": {
@@ -108,6 +108,9 @@
           "sp": 0,
           "cp": 0
         }
+      },
+      "equipable": {
+        "equipped": false
       },
       "damaging": {
         "damage": {
@@ -127,6 +130,16 @@
         "type": ""
       }
     },
+    "race": {
+      "templates": ["describable"],
+      "name": "",
+      "baseSpeed": 10,
+      "languages": [],
+      "abilityBonus": {
+        "ability": "str",
+        "bonus": 1
+      }
+    },
     "gear": {
       "templates": ["common", "describable", "typable", "magical"]
     },
@@ -136,7 +149,7 @@
       "ability": ""
     },
     "weapon": {
-      "templates": ["common", "damaging", "describable", "typable", "magical"],
+      "templates": ["common", "damaging", "describable", "typable", "magical", "equipable"],
       "group": "",
       "strength": null,
       "ability": "",
@@ -156,7 +169,7 @@
       "radius": 2
     },
     "armor": {
-      "templates": ["common", "describable", "typable", "magical"],
+      "templates": ["common", "describable", "typable", "magical", "equipable"],
       "rating": 0,
       "penalty": 0,
       "bonus": 0

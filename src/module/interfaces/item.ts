@@ -1,9 +1,11 @@
+export interface Currency {
+    gp: number;
+    sp: number;
+    cp: number;
+}
+
 export interface ICost {
-    cost: {
-        gp: number;
-        sp: number;
-        cp: number;
-    }
+    cost: Currency;
 }
 
 export interface IDamaging {
@@ -17,6 +19,10 @@ export interface IMagical {
     isMagical: boolean;
     rarity: string;
     category: string;
+}
+
+export interface IEquipable {
+    equipped: boolean;
 }
 
 export interface IDescribable {
@@ -34,7 +40,7 @@ export interface Focus extends IDescribable {
     ability: string;
 }
 
-export interface Weapon extends ICost, IDamaging, IDescribable, ITypeable, IMagical {
+export interface Weapon extends IEquipable, ICost, IDamaging, IDescribable, ITypeable, IMagical {
     group: string;
     strength?: number;
     ability: string;
@@ -54,7 +60,7 @@ export interface Grenade extends ICost, IDamaging, IDescribable, IMagical {
     radius: number;
 }
 
-export interface Armor extends ICost, IDescribable, ITypeable, IMagical {
+export interface Armor extends IEquipable, ICost, IDescribable, ITypeable, IMagical {
     rating: number;
     penalty: number;
     bonus: number;
@@ -101,3 +107,10 @@ export interface Spell extends IDamaging, IDescribable, ITypeable {
         distance: number;
     }
 }
+
+export interface FAGEItemInnerData extends Gear, Focus, Weapon, Grenade, Armor, Talent, Background, Class, Power, Spell {
+}
+export interface FAGEItemData extends BaseEntityData {
+    data: FAGEItemInnerData;
+}
+

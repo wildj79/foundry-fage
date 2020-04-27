@@ -1,7 +1,8 @@
-import { FAGEActorData } from "../interfaces/actor-data";
+import { FAGEActorInnerData } from "../interfaces/actor-data";
+import { FAGEItemData } from "../interfaces/item";
 
 export class FAGEItem extends Item {
-    data: FAGEActorData;
+    data: FAGEItemData;
     
     get hasAttack(): boolean {
         return true;

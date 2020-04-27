@@ -10,18 +10,18 @@ export class FAGEActorSheet extends ActorSheet {
         data.cssClass = isOwner ? "editable": "locked";
         data.config = CONFIG.FAGE;
 
-        const focuses = data.actor.items.reduce((prev: FAGEItem[], curr: FAGEItem): FAGEItem[] => {
+        const focuses = this.actor.items.reduce((prev: FAGEItem[], curr: FAGEItem): FAGEItem[] => {
             if (curr.type === "focus") prev.push(curr);
 
             return prev;
-        }, [])
+        }, []);
 
         for (let [a, abl] of Object.entries(data.data.abilities)) {
             abl.label = CONFIG.FAGE.abilities[a];
 
             for (let focus of focuses) {
-                if (focus.data && focus.data.ability === a)
-                    abl.focuses ? abl.focuses.push(focus.data) : abl.focuses = [focus.data];
+                if (focus.data.data && focus.data.data.ability === a)
+                    abl.focuses ? abl.focuses.push(focus.data.data) : abl.focuses = [focus.data.data];
             }
         }
 
