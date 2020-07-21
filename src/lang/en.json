@@ -1,17 +1,23 @@
 {
-    "FAGE.Ability.Accuracy": "Accuracy",
-    "FAGE.Ability.Communication": "Communication",
-    "FAGE.Ability.Constitution": "Constitution",
-    "FAGE.Ability.Dexterity": "Dexterity",
-    "FAGE.Ability.Fighting": "Fighting",
-    "FAGE.Ability.Intelligence": "Intelligence",
-    "FAGE.Ability.Perception": "Perception",
-    "FAGE.Ability.Strength": "Strength",
-    "FAGE.Ability.Willpower": "Willpower",
-    "FAGE.Health": "Health",
-    "FAGE.Speed": "Speed",
-    "FAGE.Defense": "Defense",
-    "FAGE.Armor.Rating": "Armor",
-    "FAGE.Armor.Penalty": "Penalty",
-    "FAGE.Armor.Type": "Armor Type"
+    "FAGE": {
+        "Ability": {
+            "Accuracy": "Accuracy",
+            "Communication": "Communication",
+            "Constitution": "Constitution",
+            "Dexterity": "Dexterity",
+            "Fighting": "Fighting",
+            "Intelligence": "Intelligence",
+            "Perception": "Perception",
+            "Strength": "Strength",
+            "Willpower": "Willpower"
+        },
+        "Health": "Health",
+        "Speed": "Speed",
+        "Defense": "Defense",
+        "Armor": {
+            "Rating": "Armor",
+            "Penalty": "Penalty",
+            "Type": "Armor Type"
+        }
+    }
 }

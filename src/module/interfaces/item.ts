@@ -108,7 +108,17 @@ export interface Spell extends IDamaging, IDescribable, ITypeable {
     }
 }
 
-export interface FAGEItemInnerData extends Gear, Focus, Weapon, Grenade, Armor, Talent, Background, Class, Power, Spell {
+export interface Race extends IDescribable {
+    name: string;
+    baseSpeed: number;
+    languages: string[],
+    abilitiyBonus: {
+        ability: string;
+        bonus: number;
+    }
+}
+
+export interface FAGEItemInnerData extends Gear, Focus, Weapon, Grenade, Armor, Talent, Background, Class, Power, Spell, Race {
 }
 export interface FAGEItemData extends BaseEntityData {
     data: FAGEItemInnerData;
